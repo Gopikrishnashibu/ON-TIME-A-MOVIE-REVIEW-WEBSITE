@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON TIME - Movie Reviews</title>
+    <style>
+        
+        section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#contact {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+        
+body, h1, h2, h3, h4, p, ul, li, a, button, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+h1{
+color: red;
+}
+
+
+header {
+    background-color: #66FCF1;
+    color: #fff;
+    padding: 15px 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-style: unset;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar ul li a {
+    color: #070606;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #aaa0a0;
+    border-radius: 5px;
+}
+
+
+main {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.movies {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.movie-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.movie-card .links a {
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.movie-card .links a:hover {
+    background-color: #0056b3;
+}
+
+.comments-section {
+    margin-top: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: none;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#comments-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+#comments-list li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+footer {
+    background-color: #333;
+    color: #323131;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+ .hidden {
+    display: none;
+}
+
+        section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#contact {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+        
+body, h1, h2, h3, h4, p, ul, li, a, button, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+h1{
+color: red;
+}
+
+
+header {
+    background-color: #66FCF1;
+    color: #fff;
+    padding: 15px 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-style: unset;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar ul li a {
+    color: #070606;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #aaa0a0;
+    border-radius: 5px;
+}
+
+
+main {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.movies {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.movie-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.movie-card .links a {
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.movie-card .links a:hover {
+    background-color: #0056b3;
+}
+
+.comments-section {
+    margin-top: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: none;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#comments-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+#comments-list li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+footer {
+    background-color: #333;
+    color: #323131;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+ .hidden {
+    display: none;
+}
+
+
+</style>
+    
+    <script>
+        function addComment() {
+    const commentInput = document.getElementById('comment-input');
+    const commentsList = document.getElementById('comments-list');
+
+    if (commentInput.value.trim() !== "") {
+        const newComment = document.createElement('li');
+        newComment.textContent = commentInput.value;
+        commentsList.appendChild(newComment);
+        commentInput.value = ""; 
+    } else {
+        alert("Please enter a comment before posting.");
+    }
+}
+document.getElementById("contact-toggle").addEventListener("click", function() {
+    const contactSection = document.getElementById("contact");
+    
+
+    contactSection.classList.toggle("hidden");
+});
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>ON TIME</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a  href="CA3(2).HTML">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main id="home">
+        <section class="intro">
+            <h2>Welcome to ON TIME</h2>
+            <p>Hello my dear cinephiles .Step into the world of cinema where every movie lover’s voice matters. In "ON TIME", we believe that every movie has a story beyond the script, and that story is told through your reviews. Whether you're here to gush about the latest blockbuster, debate the merits of an indie gem, or dive deep into film analysis, this is your platform. Browse through our gallery of movie posters, leave your personal reviews, and engage with fellow cinephiles. Let's make movie-watching a shared adventure!.Write down your valuable reviews of the recent movies under the respective movie posters. Explore trailers, IMDb ratings, booking options, and share your thoughts about your favorite movies!</p>
+        </section>
+
+        <section class="movies">
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNY03qiSZyeYSRlxt9xxdgAqMlZFQj_itMgw&s" alt="Movie Poster">
+                <h3>vatar-fire-and-ash</h3>
+                <div class="links">
+                    <a href="https://youtu.be/d9MyW72ELq0?si=s1V5sIzQZnhI05uB" target="_blank">Watch Trailer</a>
+                    <a href="https://in.bookmyshow.com/chandigarh/movies/avatar-fire-and-ash/ET00407893" target="_blank">Book Tickets</a>
+                    <a href="https://www.imdb.com/title/tt1757678/?ref_=fn_al_tt_5" target="_blank">IMDb Rating</a>
+                </div>
+                <div class="comments-section">
+                    <h4>Comments</h4>
+                    <textarea id="comment-input" placeholder="Share your opinion..."></textarea>
+                    <button onclick="addComment()">Post Comment</button>
+                    <ul id="comments-list"></ul>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00383474-klabltwbvz-portrait.jpg" alt="Movie Poster">
+                <h3>Venom-the-last-dance</h3>
+                <div class="links">
+                    <a href="https://youtu.be/__2bjWbetsA?si=eFHZPD4RxVNLpvYo" target="_blank">Watch Trailer</a>
+                    <a href="https://in.bookmyshow.com/chandigarh/movies/venom-the-last-dance/ET00383474" target="_blank">Book Tickets</a>
+                    <a href="https://www.imdb.com/title/tt16366836/?ref_=ext_shr_lnk" target="_blank">IMDb Rating</a>
+                </div>
+                <div class="comments-section">
+                    <h4>Comments</h4>
+                    <textarea id="comment-input" placeholder="Share your opinion..."></textarea>
+                    <button onclick="addComment()">Post Comment</button>
+                    <ul id="comments-list"></ul>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00353996-qvtntjzvxs-portrait.jpg" alt="Movie Poster">
+                <h3>Bhool-bhulaiyaa-3</h3>
+                <div class="links">
+                    <a href="https://youtu.be/6YMY62tMLUA?si=zzeSXXVa1bJc9_So" target="_blank">Watch Trailer</a>
+                    <a href="https://in.bookmyshow.com/chandigarh/movies/bhool-bhulaiyaa-3/ET00353996" target="_blank">Book Tickets</a>
+                    <a href="https://www.imdb.com/title/tt26932223/?ref_=ext_shr_lnk" target="_blank">IMDb Rating</a>
+                </div>
+                <div class="comments-section">
+                    <h4>Comments</h4>
+                    <textarea id="comment-input" placeholder="Share your opinion..."></textarea>
+                    <button onclick="addComment()">Post Comment</button>
+                    <ul id="comments-list"></ul>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://cinematimes.in/wp-content/uploads/2024/10/Pani.jpg" alt="Movie Poster">
+                <h3>Pani</h3>
+                <div class="links">
+                    <a href="https://youtu.be/TmpzntdJqm4?si=wyzoXpug2fgI1cGR" target="_blank">Watch Trailer</a>
+                    <a href="https://in.bookmyshow.com/chandigarh/movies/pani/ET00404167" target="_blank">Book Tickets</a>
+                    <a href="https://www.imdb.com/title/tt29461220/?ref_=ext_shr_lnk" target="_blank">IMDb Rating</a>
+                </div>
+                <div class="comments-section">
+                    <h4>Comments</h4>
+                    <textarea id="comment-input" placeholder="Share your opinion..."></textarea>
+                    <button onclick="addComment()">Post Comment</button>
+                    <ul id="comments-list"></ul>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w0_qDCnl0bwNgrS9DlYyFlPyEfkmfw0VUA&s" alt="Movie Poster">
+                <h3>Kanguva</h3>
+                <div class="links">
+                    <a href="https://youtu.be/ajnCMSC4VPo?si=C-PWLpAbpKu_vCI3" target="_blank">Watch Trailer</a>
+                    <a href="https://in.bookmyshow.com/chandigarh/movies/kanguva/ET00357490" target="_blank">Book Tickets</a>
+                    <a href="https://www.imdb.com/title/tt22036406/?ref_=ext_shr_lnk" target="_blank">IMDb Rating</a>
+                </div>
+                <div class="comments-section">
+                    <h4>Comments</h4>
+                    <textarea id="comment-input" placeholder="Share your opinion..."></textarea>
+                    <button onclick="addComment()">Post Comment</button>
+                    <ul id="comments-list"></ul>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwm_aD44tL2YwLcm1MePx8ZSHlJq_EMJy94w&s" alt="Movie Poster">
+                <h3>Gladiator-ii</h3>
+                <div class="links">
+                    <a href="https://youtu.be/4rgYUipGJNo?si=q_u5SMEeEaHhCO84" target="_blank">Watch Trailer</a>
+                    <a href="https://in.bookmyshow.com/chandigarh/movies/gladiator-ii/ET00413291" target="_blank">Book Tickets</a>
+                    <a href="https://www.imdb.com/title/tt9218128/?ref_=ext_shr_lnk" target="_blank">IMDb Rating</a>
+                </div>
+                <div class="comments-section">
+                    <h4>Comments</h4>
+                    <textarea id="comment-input" placeholder="Share your opinion..."></textarea>
+                    <button onclick="addComment()">Post Comment</button>
+                    <ul id="comments-list"></ul>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfK4TIt4OeDNdwJ9CzH0hkY7OWRoJKJw1gvg&s" alt="Movie Poster">
+                <h3>The-wild-robot</h3>
+                <div class="links">
+                    <a href="https://youtu.be/67vbA5ZJdKQ?si=tkFsam7xPcTYMpsL" target="_blank">Watch Trailer</a>
+                    <a href="https://in.bookmyshow.com/chandigarh/movies/the-wild-robot/ET00398665" target="_blank">Book Tickets</a>
+                    <a href="https://www.imdb.com/title/tt29623480/?ref_=ext_shr_lnk" target="_blank">IMDb Rating</a>
+                </div>
+                <div class="comments-section">
+                    <h4>Comments</h4>
+                    <textarea id="comment-input" placeholder="Share your opinion..."></textarea>
+                    <button onclick="addComment()">Post Comment</button>
+                    <ul id="comments-list"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h3>Contact Us</h3>
+        <a href="support@ontime.com">Email: support@ontime.com</a>
+        <p>Phone: +91-2244-3355</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
